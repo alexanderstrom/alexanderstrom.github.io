@@ -19,7 +19,14 @@
     .container {
       font-family: 'Open Sans', sans-serif;
       position: relative;
-          flex: 1;
+      flex: 1;
+      transition: opacity 0.8s ease, transform 0.5s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .container.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     h1 {
       text-align: center;
@@ -31,7 +38,6 @@
       text-align: center;
       color: #fff;
       margin: 0;
-
     }
   </style>
 
@@ -46,6 +52,14 @@
       Frontend Developer
     </h2>
   </div>
+
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/core.js"></script> -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  setTimeout(function() {
+    $('.container').addClass('visible');
+  }, 500);
+  </script>
 </body>
 
 </html>
